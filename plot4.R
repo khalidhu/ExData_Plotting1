@@ -21,10 +21,11 @@ plot(subdata$datetime,subdata$Global_active_power,xlab ="", ylab = "Global Activ
 plot(subdata$datetime,subdata$Voltage,xlab ="datetime", ylab = "Voltage", type ="l")
 
 # Energy sub metering
+cols = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 plot(subdata$datetime,subdata$Sub_metering_1,xlab ="", ylab = "Energy sub metering", type ="l",col = 'black')
 lines(subdata$datetime,subdata$Sub_metering_2, col = "red")
 lines(subdata$datetime,subdata$Sub_metering_3, col = "blue")
-legend('topright',c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col=c('black','red','blue'), lty = 1, lwd = 3)
+legend('topright',legend=cols ,col=c('black','red','blue'), lty = 1, lwd = 3)
 
 # Global Reactive power
 plot(subdata$datetime,subdata$Global_reactive_power,xlab ="datetime", ylab = "Global_reactive_power", type ="l")
